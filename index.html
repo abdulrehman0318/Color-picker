@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="colors">
+      <span onclick="changeColor ('#1dd1a1')" style="--clr:#1dd1a1;"></span>
+      <span onclick="changeColor ('#ff6b6b')" style="--clr:#ff6b6b;"></span>
+      <span onclick="changeColor ('#2986de')" style="--clr:#2986de;"></span>
+      <span onclick="changeColor ('#f368e0')" style="--clr:#f368e0;"></span>
+      <span onclick="changeColor ('#ff9f43')" style="--clr:#ff9f43;"></span>
+    </div>
+    <div class="box"></div>
+
+    <!-- Optional JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script>
+
+        let box = document.querySelector('.box');
+        function changeColor (color){
+            box.style.background = color;
+            document.querySelectorAll('span').forEach(function(item){
+                item.classList.remove('active')
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+
+  </body>
+</html>
